@@ -1,4 +1,4 @@
-# Проект **_Movies Explorer_**111
+# Проект **_Movies Explorer_**
 
 ---
 
