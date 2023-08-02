@@ -3,7 +3,7 @@ import { Routes, Route, useNavigate } from "react-router-dom";
 import { CurrentUserContext } from "../../contexts/CurrentUserContext";
 import api from "../../utils/api";
 import * as auth from "../../utils/auth";
-// ДВА ФАЙЛА НИЖЕ ДЛЯ ПРОВЕРКИ КАРТОЧЕК ФИЛЬМОВ.
+// ДВА ФАЙЛА НИЖЕ ДЛЯ ПРОВЕРКИ КАРТОЧЕК ФИЛЬМОВ
 import { moviesArray } from "../../utils/constants";
 import { savedMoviesArray } from "../../utils/constants";
 import "../../index.css";
