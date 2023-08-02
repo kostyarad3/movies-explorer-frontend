@@ -7,7 +7,11 @@ function AboutMe() {
       <h2 className="about-me__heading">Cтудент</h2>
       <div className="about-me__container">
         <div className="about-me__item">
-          <img className="about-me__photo" src={myPhoto} alt="Моя фотография" />
+          <img
+            className="about-me__photo"
+            src={myPhoto}
+            alt="Фотография студента Радченко Константина"
+          />
         </div>
         <div className="about-me__item">
           <h3 className="about-me__name">Константин</h3>
@@ -18,7 +22,11 @@ function AboutMe() {
             по специальности пилот-инженер. В 2022 году начал кодить. Заканчиваю
             курсы от Яндекс Практикума, нахожусь в активном поиске стажировок.
           </p>
-          <a className="link about-me__link" target="blank" href="https://github.com/kostyarad3">
+          <a
+            className="link about-me__link"
+            target="blank"
+            href="https://github.com/kostyarad3"
+          >
             Github
           </a>
         </div>

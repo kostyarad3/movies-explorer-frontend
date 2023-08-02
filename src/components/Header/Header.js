@@ -2,10 +2,9 @@ import React from "react";
 import headerLogo from "../../images/logo-header.svg";
 import Navigation from "../Navigation/Navigation";
 import { Link } from "react-router-dom";
-import useWindowWidth from '../../hooks/useWindowWidth'
+import useWindowWidth from "../../hooks/useWindowWidth";
 
 function Header({ loggedIn }) {
-
   const windowWidth = useWindowWidth();
   const [isNavigationOpen, setisNavigationOpen] = React.useState(false);
 
@@ -13,7 +12,7 @@ function Header({ loggedIn }) {
     setisNavigationOpen(!isNavigationOpen);
   }
 
-  return loggedIn && (windowWidth < 900) ? (
+  return loggedIn && windowWidth < 900 ? (
     <>
       <Navigation
         isNavigationOpen={isNavigationOpen}
@@ -23,26 +22,32 @@ function Header({ loggedIn }) {
         <Link to="/" className="link">
           <img className="header__logo" alt="Логотип шапки" src={headerLogo} />
         </Link>
-        <div className="button navigation-menu" onClick={handleNavigationOpen}>
-          <span className="navigation-menu__item"></span>
-          <span className="navigation-menu__item"></span>
-          <span className="navigation-menu__item"></span>
+        <div className="button header-menu" onClick={handleNavigationOpen}>
+          <span className="header-menu__item"></span>
+          <span className="header-menu__item"></span>
+          <span className="header-menu__item"></span>
         </div>
       </header>
     </>
-  ) : loggedIn && (windowWidth > 900) ? (
+  ) : loggedIn && windowWidth > 900 ? (
     <header className="header">
       <Link to="/" className="link">
         <img className="header__logo" alt="Логотип шапки" src={headerLogo} />
       </Link>
-      <div className="header__films">
-        <Link to="/movies" replace className="link header__film">
-          Фильмы
-        </Link>
-        <Link to="/saved-movies" className="link header__film">
-          Сохраненные фильмы
-        </Link>
-      </div>
+      <nav className="header__films">
+        <ul className="header__list">
+          <li className="header__list-item">
+            <Link to="/movies" replace className="link header__film">
+              Фильмы
+            </Link>
+          </li>
+          <li className="header__list-item">
+            <Link to="/saved-movies" className="link header__film">
+              Сохраненные фильмы
+            </Link>
+          </li>
+        </ul>
+      </nav>
       <Link to="/profile" className="button header__profile-button">
         Аккаунт
       </Link>
@@ -53,10 +58,10 @@ function Header({ loggedIn }) {
         <img className="header__logo" alt="Логотип шапки" src={headerLogo} />
       </Link>
       <div className="header__buttons">
-        <Link to="/sign-up" className="button header__button">
+        <Link to="/signup" className="button header__button">
           Регистрация
         </Link>
-        <Link to="/sign-in" className="button header__button">
+        <Link to="/signin" className="button header__button">
           Войти
         </Link>
       </div>

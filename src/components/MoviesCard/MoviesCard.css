@@ -49,7 +49,7 @@
 }
 
 .movie__button{
-  margin: 14px;
+  margin: 19px 14px 0 0;
   display: block;
   width: 30px;
   height: 30px;
@@ -57,6 +57,7 @@
   color: transparent;
   grid-row-start: 1;
   grid-row-end: 3;
+  /* align-self: fl; */
   justify-self: end;
   transition: background 0.3s linear;
   background: url(../../images/savebtn-off.svg) center no-repeat;

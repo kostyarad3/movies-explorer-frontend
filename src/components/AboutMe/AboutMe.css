@@ -1,5 +1,5 @@
 .about-me {
-  padding: 70px 0;
+  padding: 82px 0 70px;
 }
 
 @media screen and (min-width: 650px ) {
@@ -112,7 +112,7 @@
   line-height: 16px;
   color: #000;
   letter-spacing: -0.04em;
-  margin: 20px 0;
+  margin: 20px 0 55px;
 }
 
 @media screen and (min-width: 650px ) {

@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 import useValidateForm from "../../hooks/useValidateForm";
 
 function Register({ handleRegistration, RegisterErrorText }) {
-  const { inputValues, inputErrors, isFormValid, handleInputChange } = useValidateForm();
+  const { inputValues, inputErrors, isFormValid, handleInputChange } =
+    useValidateForm();
 
   function handleSubmit(evt) {
     evt.preventDefault();
@@ -13,60 +14,59 @@ function Register({ handleRegistration, RegisterErrorText }) {
   }
 
   return (
-    <>
+    <section className="register">
       <form className="register-form" onSubmit={handleSubmit}>
         <Link to="/" className="link auth__image">
           <img alt="Логотип шапки" src={headerLogo} />
         </Link>
-        <h3 className="register-form__title">Добро пожаловать!</h3>
+        <h1 className="register-form__title">Добро пожаловать!</h1>
         <p className="register-form__input-name">Имя</p>
         <input
           type="name"
           className="register-form__input"
           name="name"
           id="name"
+          placeholder="Имя"
           required
           minLength="2"
           maxLength="40"
           value={inputValues?.name || ""}
           onChange={handleInputChange}
         />
-        <span className="register-form__input-error">
-          {inputErrors?.name && "Неправильно введено имя."}
-        </span>
+        <label className="register-form__input-error">{inputErrors.name}</label>
         <p className="register-form__input-name">E-mail</p>
         <input
           type="email"
           className="register-form__input"
           name="email"
           id="email"
+          placeholder="E-mail"
           required
-          minLength="3"
+          minLength="5"
           maxLength="40"
           value={inputValues?.email || ""}
           onChange={handleInputChange}
         />
-        <span className="register-form__input-error">
-          {inputErrors?.email && "Введите адрес электронной почты."}
-        </span>
+        <label className="register-form__input-error">
+          {inputErrors.email}
+        </label>
         <p className="register-form__input-name">Пароль</p>
         <input
           type="password"
           className="register-form__input"
           name="password"
           id="password"
+          placeholder="Пароль"
           required
           minLength="6"
           maxLength="40"
           value={inputValues?.password || ""}
           onChange={handleInputChange}
         />
-        <span className="register-form__input-error">
-          {inputErrors?.password && "Что-то пошло не так..."}
-        </span>
-        <span className="register-form__error">
-          {RegisterErrorText}
-        </span>
+        <label className="register-form__input-error">
+          {inputErrors.password}
+        </label>
+        <label className="register-form__error">{RegisterErrorText}</label>
         <button
           type="submit"
           aria-label="Зарегестрироваться"
@@ -79,12 +79,12 @@ function Register({ handleRegistration, RegisterErrorText }) {
         </button>
         <p className="register-form__text">
           Уже зарегестрированы?&nbsp;
-          <Link to="/sign-in" className="link register-form__link">
+          <Link to="/signin" className="link register-form__link">
             Войти
           </Link>
         </p>
       </form>
-    </>
+    </section>
   );
 }
 export default Register;

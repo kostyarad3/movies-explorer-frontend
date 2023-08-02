@@ -10,32 +10,38 @@ function NavTab() {
   }
 
   return (
-    <nav className="navtab">
-      <p
-        href="#"
-        id="about-project"
-        className="link navtab__link"
-        onClick={scrollToSection}
-      >
-        О проекте
-      </p>
-      <p
-        href="#"
-        id="techs"
-        className="link navtab__link"
-        onClick={scrollToSection}
-      >
-        Технологии
-      </p>
-      <p
-        href="#"
-        id="about-me"
-        className="link navtab__link"
-        onClick={scrollToSection}
-      >
-        Студент
-      </p>
-    </nav>
+    <ul className="navtab">
+      <li className="navtab__item">
+        <a
+          href="#1"
+          id="about-project"
+          className="link navtab__link"
+          onClick={scrollToSection}
+        >
+          О проекте
+        </a>
+      </li>
+      <li className="navtab__item">
+        <a
+          href="#1"
+          id="techs"
+          className="link navtab__link"
+          onClick={scrollToSection}
+        >
+          Технологии
+        </a>
+      </li>
+      <li className="navtab__item">
+        <a
+          href="#1"
+          id="about-me"
+          className="link navtab__link"
+          onClick={scrollToSection}
+        >
+          Студент
+        </a>
+      </li>
+    </ul>
   );
 }
 

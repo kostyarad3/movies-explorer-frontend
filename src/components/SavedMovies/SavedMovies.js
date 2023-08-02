@@ -4,9 +4,12 @@ import MoviesCardList from "../MoviesCardList/MoviesCardList";
 
 function SavedMovies({ savedMovies, page, handleSearch }) {
   return (
-    <section className="movies">
+    <section className="saved-movies">
       <SearchForm movies={savedMovies} handleSearch={handleSearch} />
-      <MoviesCardList movies={savedMovies} page={page} />
+      <MoviesCardList
+        movies={savedMovies}
+        page={page}
+      />
     </section>
   );
 }

@@ -22,6 +22,7 @@ function SearchForm({ movies, handleSearch }) {
         placeholder="Фильм"
         className="search-form__input"
         name="searchValue"
+        required
         id="search"
         value={inputValues?.searchValue || ""}
         onChange={handleInputChange}

@@ -13,7 +13,7 @@ function MoviesCard({ movie, page }) {
 
   return (
     <>
-      <p className="movie__name">{movie.nameRU}</p>
+      <h2 className="movie__name">{movie.nameRU}</h2>
       <p className="movie__duration">{filmDuration}</p>
       {page === "movies" ? (
         <button
@@ -25,11 +25,13 @@ function MoviesCard({ movie, page }) {
           aria-label="Сохранить в рекомендации"
         ></button>
       ) : (
-        <button
-          className="button saved-movie__button"
-        ></button>
+        <button className="button saved-movie__button" type="button"></button>
       )}
-      <img className="movie__image" alt="Картинка фильма" src={movie.image} />
+      <img
+        className="movie__image"
+        alt={`Картинка фильма ${movie.name} режиссера ${movie.director}`}
+        src={movie.image}
+      />
     </>
   );
 }

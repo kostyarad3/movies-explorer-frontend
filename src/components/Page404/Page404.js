@@ -10,7 +10,7 @@ function Page404() {
 
   return (
     <section className="page404">
-      <p className="page404__digits">404</p>
+      <h1 className="page404__digits">404</h1>
       <p className="page404__text">Страница не найдена</p>
       <p onClick={returtToPrevPage} className="link page404__link">Назад</p>
     </section>

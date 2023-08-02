@@ -1,7 +1,7 @@
 .techs {
   box-sizing: border-box;
-  padding: 60px 0;
-  margin: 0;
+  padding: 61px 0;
+  margin: 0 auto;
   max-width: 284px;
 }
 
@@ -101,6 +101,7 @@
 }
 
 .techs__container {
+  padding: 0;
   max-width: 178px;
   margin: 0 auto;
   display: flex;

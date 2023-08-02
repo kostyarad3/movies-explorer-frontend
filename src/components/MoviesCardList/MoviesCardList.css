@@ -2,14 +2,15 @@
   width: 100%;
   max-width: 300px;
   border-top: 1px solid #E8E8E8;
-  margin: 50px auto 0;
+  margin: 50px auto;
   padding: 0;
   list-style: none;
   display: grid;
   justify-content: center;
-  gap: 16px;
+  row-gap: 16px;
   grid-template-columns: repeat(auto-fit, 300px);
 }
+
 
 @media screen and (min-width: 695px ) {
   .movies-cardlist {
@@ -26,7 +27,7 @@
   .movies-cardlist {
     max-width: 1140px;
     padding-top: 80px;
-    row-gap: 30px;
+    gap: 30px 24px;
     justify-content: center;
     grid-template-columns: repeat(auto-fit, 364px);
   }
@@ -53,7 +54,7 @@
 @media screen and (min-width: 650px ) {
   .movies-cardlist__button {
     width: 320px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
 }
 

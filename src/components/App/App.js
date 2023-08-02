@@ -36,17 +36,16 @@ function App() {
     const newMoviesArray = movies.filter((movie) => {
       return movie.nameRU.toLowerCase().includes(searchValue.toLowerCase());
     });
-    return newMoviesArray
+    return newMoviesArray;
   }
 
-  function handleMoviesSearch (searchValue, movies) {
+  function handleMoviesSearch(searchValue, movies) {
     setMovies(findMoviesByQuery(searchValue, movies));
   }
 
-  function handleSavedMoviesSearch (searchValue, savedMovies) {
+  function handleSavedMoviesSearch(searchValue, savedMovies) {
     setSavedMovies(findMoviesByQuery(searchValue, savedMovies));
   }
-
 
   function handleRegistration(name, email, password) {
     auth
@@ -158,26 +157,26 @@ function App() {
           />
 
           <Route
-            path="/sign-in"
+            path="/signin"
             element={
-              <>
+              <main>
                 <Login
                   handleLogin={handleLogin}
                   LoginErrorText={loginErrorText}
                 />
-              </>
+              </main>
             }
           />
 
           <Route
-            path="/sign-up"
+            path="/signup"
             element={
-              <>
+              <main>
                 <Register
                   handleRegistration={handleRegistration}
                   RegisterErrorText={registerErrorText}
                 />
-              </>
+              </main>
             }
           />
 
@@ -186,11 +185,13 @@ function App() {
             element={
               <>
                 <Header loggedIn={loggedIn} />
-                <Movies
-                  movies={movies}
-                  page="movies"
-                  handleSearch={handleMoviesSearch}
-                />
+                <main className="main">
+                  <Movies
+                    movies={movies}
+                    page="movies"
+                    handleSearch={handleMoviesSearch}
+                  />
+                </main>
                 <Footer />
               </>
             }
@@ -201,11 +202,13 @@ function App() {
             element={
               <>
                 <Header loggedIn={loggedIn} />
-                <SavedMovies
-                  savedMovies={savedMovies}
-                  page="savedMovies"
-                  handleSearch={handleSavedMoviesSearch}
-                />
+                <main className="main">
+                  <SavedMovies
+                    savedMovies={savedMovies}
+                    page="savedMovies"
+                    handleSearch={handleSavedMoviesSearch}
+                  />
+                </main>
                 <Footer />
               </>
             }
@@ -216,11 +219,13 @@ function App() {
             element={
               <>
                 <Header loggedIn={loggedIn} />
-                <Profile
-                  onUpdateUser={handleUpdateUser}
-                  handleExitClick={handleExitClick}
-                  ProfileErrorText={profileErrorText}
-                />
+                <main className="main">
+                  <Profile
+                    onUpdateUser={handleUpdateUser}
+                    handleExitClick={handleExitClick}
+                    ProfileErrorText={profileErrorText}
+                  />
+                </main>
               </>
             }
           />
@@ -228,9 +233,9 @@ function App() {
           <Route
             path="*"
             element={
-              <>
+              <main className="main">
                 <Page404 />
-              </>
+              </main>
             }
           />
         </Routes>

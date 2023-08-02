@@ -8,14 +8,26 @@ function Footer() {
         Учебный проект Яндекс.Практикум х BeatFilm.
       </h2>
       <div className="footer__section">
-        <div className="footer__links">
-          <a href="https://practicum.yandex.ru/" target="blank" className="link footer__link">
-            Яндекс.Практикум
-          </a>
-          <a href="https://github.com/kostyarad3" target="blank" className="link footer__link">
-            Github
-          </a>
-        </div>
+        <ul className="footer__links">
+          <li className="footer__links-item">
+            <a
+              href="https://practicum.yandex.ru/"
+              target="blank"
+              className="link footer__link"
+            >
+              Яндекс.Практикум
+            </a>
+          </li>
+          <li className="footer__links-item">
+            <a
+              href="https://github.com/kostyarad3"
+              target="blank"
+              className="link footer__link"
+            >
+              Github
+            </a>
+          </li>
+        </ul>
         <p className="footer__content">&copy; {date}</p>
       </div>
     </footer>

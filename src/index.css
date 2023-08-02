@@ -35,5 +35,9 @@
 @import url('../src/components/SearchForm/SearchForm.css');
 /* MoviesCardList */
 @import url('../src/components/MoviesCardList/MoviesCardList.css');
+/* SavedMovies */
+@import url('../src/components/SavedMovies/SavedMovies.css');
 /* MoviesCard */
 @import url('../src/components/MoviesCard/MoviesCard.css');
+
+/* * { outline: 1px solid red; } */

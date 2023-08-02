@@ -22,7 +22,7 @@
 @media screen and (min-width: 900px ) {
   .search-form {
     max-width: 1140px;
-    margin-top: 87px;
+    margin-top: 80px;
     margin-bottom: 67px;
     padding-right: 30px;
   }
@@ -37,6 +37,11 @@
   height: 72px;
   width: 100%;
   padding: 25px 53px 25px 19px;
+  outline: none;
+}
+
+.search-form__input:focus {
+  border: 1px solid #2BE080;
 }
 
 @media screen and (min-width: 650px ) {
@@ -130,6 +135,7 @@
 @media screen and (min-width: 650px ) {
   .serch-form__filter-container {
     border-bottom: none;
+    padding: 0;
   }
 }
 

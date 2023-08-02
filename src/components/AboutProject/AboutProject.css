@@ -132,7 +132,7 @@
 @media screen and (min-width: 650px ) {
   .about-project__scale {
     grid-template-rows: repeat(2, 36px);
-    grid-template-columns: 140px 528px;
+    grid-template-columns: 140px minmax(auto, 528px);;
     margin-top: 93px;
     font-size: 14px;
   }

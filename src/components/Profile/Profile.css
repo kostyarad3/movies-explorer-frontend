@@ -76,6 +76,11 @@
   height: 25px;
   min-width: 200px;
   align-self: center;
+  outline: none;
+}
+
+.profile-form__input:focus {
+  border-bottom: 1px solid #2BE080;
 }
 
 .profile-form__input:disabled {
